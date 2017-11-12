@@ -20,3 +20,12 @@ after_success:
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD
   - docker images
   - docker push siestesa/alma-server:latest
+
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key: $TOKEN
+  name: Build Travis $(date + '%u, %d/%m/%Y, %T')
+  on:
+    tags: true
+    repo: siestsa/alma-m2-2017
