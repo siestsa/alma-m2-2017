@@ -35,5 +35,4 @@ deploy:
   api_key: $TOKEN
   name : Build Travis $(date + '%d.%m.%Y %R')
   on:
-    tags: true
     repo: siestsa/alma-m2-2017
