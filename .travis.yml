@@ -25,7 +25,7 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key: $TOKEN
-  name: Build Travis $(date + '%u, %d/%m/%Y, %T')
+  name : Build Travis $(date + '%d.%m.%Y %R')
   on:
     tags: true
     repo: siestsa/alma-m2-2017
